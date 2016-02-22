@@ -1,0 +1,23 @@
+{
+	"name": "ContentAdbox",
+	"version": "1.0",
+	"author": [
+		"Alex Winkler"
+	],
+	"url": "http://wiki.teamliquid.net/",
+	"descriptionmsg": "Allows to put ads in the content. The headings can be defined in [[MediaWiki:Adbox_Headings]].",
+	"license-name": "MIT",
+	"type": "parserhook",
+        "requires": {
+                "MediaWiki": ">= 1.25.0"
+        },
+	"AutoloadClasses": {
+		"ContentAdboxHooks": "ContentAdboxHooks.php"
+	},
+	"Hooks": {
+		"ParserBeforeStrip": [
+			"ContentAdboxHooks::fnContentAdbox"
+		]
+	},
+	"manifest_version": 1
+}
