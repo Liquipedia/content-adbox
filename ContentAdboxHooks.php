@@ -88,16 +88,16 @@ class ContentAdboxHooks {
         public static function fnContentAdbox( &$parser, &$text, &$mStripState ) {
                 global $btf_ad_code;
                 $title = $parser->getTitle();
-                $article = new Article($title);
-                if ($article->getContent() != $text)
+                $article = WikiPage::factory($title);
+                if ($article->getText(Revision::FOR_PUBLIC) != $text)
                         return;
                 $has_added_adbox = false;
                 if (preg_match_all("/\n\s*==([^=]+)==\s*\n/", "\n" . $text, $findings))
                 {
                         $number_of_adboxes = 1;
                         $configtitle = Title::newFromText('Adbox_Headings', NS_MEDIAWIKI);
-                        $config = new Article($configtitle);
-                        $pages = $config->getContent();
+                        $config = WikiPage::factory($configtitle);
+                        $pages = $config->getText(Revision::FOR_PUBLIC);
                         $key_headings = explode("\n", $pages);
                         $adbox_code = "\n<div style=\"background-color: #444; color: #fff; height:110px; width:100%;\">$btf_ad_code</div>\n";
                         foreach($key_headings as $key_heading)
