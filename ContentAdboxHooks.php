@@ -88,6 +88,9 @@ class ContentAdboxHooks {
         public static function fnContentAdbox( &$parser, &$text, &$mStripState ) {
                 global $btf_ad_code;
                 $title = $parser->getTitle();
+                if($title->getNamespace() != NS_MAIN) {
+                        return true;
+                }
                 $article = WikiPage::factory($title);
                 if ($article->getText(Revision::FOR_PUBLIC) != $text)
                         return;
