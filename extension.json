@@ -16,7 +16,7 @@
 	},
 	"Hooks": {
 		"ParserBeforeStrip": [
-			"ContentAdboxHooks::fnContentAdbox"
+			"ContentAdboxHooks::onContentAdboxHooks"
 		]
 	},
 	"manifest_version": 1
