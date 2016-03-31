@@ -85,7 +85,7 @@ END_HTML;
 }
 
 class ContentAdboxHooks {
-        public static function onContentAdboxHooks( &$parser, &$text, &$mStripState ) {
+        public static function onParserBeforeStrip( &$parser, &$text, &$mStripState ) {
                 global $btf_ad_code;
                 $title = $parser->getTitle();
                 if($title->getNamespace() != NS_MAIN) {
