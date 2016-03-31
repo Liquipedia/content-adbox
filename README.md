@@ -1,5 +1,5 @@
-LiquiFlow
-=========
+LiquiFlow ContentAdbox
+======================
 
 MediaWiki Extension for Liquipedia, provides the ads in the content
 
