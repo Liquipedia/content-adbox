@@ -8,4 +8,4 @@ Installation
 * Extract the extension folder to extensions/
 * Add the following line to LocalSettings.php:
 
-        wfLoadExtension( 'ContentAdbox' );
+	wfLoadExtension( 'ContentAdbox' );

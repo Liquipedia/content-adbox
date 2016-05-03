@@ -8,9 +8,9 @@
 	"descriptionmsg": "Allows to put ads in the content. The headings can be defined in [[MediaWiki:Adbox_Headings]].",
 	"license-name": "MIT",
 	"type": "parserhook",
-        "requires": {
-                "MediaWiki": ">= 1.25.0"
-        },
+	"requires": {
+		"MediaWiki": ">= 1.25.0"
+	},
 	"AutoloadClasses": {
 		"ContentAdboxHooks": "ContentAdboxHooks.php"
 	},
