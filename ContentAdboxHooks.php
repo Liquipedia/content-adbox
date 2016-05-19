@@ -1,5 +1,9 @@
 <?php
 
+if(!isset($wgTLWiki)) {
+	$wgTLWiki = '';
+}
+
 switch ($wgTLWiki)
 {
 case 'sc':
