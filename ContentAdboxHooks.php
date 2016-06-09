@@ -91,6 +91,8 @@ END_HTML;
 class ContentAdboxHooks {
 	public static function onParserBeforeStrip( &$parser, &$text, &$mStripState ) {
 		global $btf_ad_code;
+		$adbox_code = "\n<div style=\"background-color: #444; color: #fff; height:110px; width:100%;\">$btf_ad_code</div>\n";
+		
 		$title = $parser->getTitle();
 		if($title->getNamespace() != NS_MAIN) {
 			return true;
@@ -105,7 +107,6 @@ class ContentAdboxHooks {
 			$config = WikiPage::factory($configtitle);
 			$pages = $config->getText(Revision::FOR_PUBLIC);
 			$key_headings = explode("\n", $pages);
-			$adbox_code = "\n<div style=\"background-color: #444; color: #fff; height:110px; width:100%;\">$btf_ad_code</div>\n";
 			foreach($key_headings as $key_heading) {
 				foreach($findings[1] as $findingid => $finding) {
 					if(!$has_added_adbox) {
