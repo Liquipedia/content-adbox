@@ -91,7 +91,7 @@ END_HTML;
 class ContentAdboxHooks {
 	public static function onParserBeforeStrip( &$parser, &$text, &$mStripState ) {
 		global $btf_ad_code;
-		$adbox_code = "\n<div style=\"background-color: #444; color: #fff; height:110px; width:100%;\">$btf_ad_code</div>\n";
+		$adbox_code = "\n<div style=\"clear: both; background-color: #444; color: #fff; height:110px; width:100%;\">$btf_ad_code</div>\n";
 		
 		$title = $parser->getTitle();
 		if($title->getNamespace() != NS_MAIN) {
