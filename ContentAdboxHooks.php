@@ -111,7 +111,7 @@ class ContentAdboxHooks {
 				foreach($findings[1] as $findingid => $finding) {
 					if(!$has_added_adbox) {
 						$pos = strpos($text, $findings[0][$findingid]);
-						if (trim($finding) == $key_heading) {
+						if (trim($finding) == trim($key_heading, "* \t\n\r\0\x0B")) {
 							$text = substr_replace($text, $findings[0][$findingid] . $adbox_code, $pos, strlen($findings[0][$findingid]));
 							$has_added_adbox = true;
 							break 2;
