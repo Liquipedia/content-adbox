@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alex Winkler"
+		]
+	},
+	"contentadbox-desc": "Allows to put ads in the content. The headings can be defined in [[MediaWiki:Adbox_Headings]]."
+}
