@@ -12,7 +12,7 @@
 		"MediaWiki": ">= 1.25.0"
 	},
 	"MessagesDirs": {
-		"CardHover": [
+		"ContentAdbox": [
 			"i18n"
 		]
 	},
